@@ -1,50 +1,117 @@
-
 # SOFT.TECH — Enterprise Network Project
 
-## Project Overview
+## 📌 Project Overview
 
-This project demonstrates the design and implementation of a multi-site enterprise network connecting Headquarters (HQ), Branch 1, and Branch 2 using Cisco Packet Tracer.
+This project demonstrates the design and implementation of a multi-site enterprise network for SOFT.TECH using Cisco Packet Tracer.
 
-## Technologies Used
+The network connects Headquarters (HQ), Branch 1, and Branch 2 using routers and switches. The project implements OSPF, DHCP, VLANs, Inter-VLAN Routing, Router-on-a-Stick, Extended ACLs, and wireless connectivity.
 
+---
+
+## 🏗️ Network Topology
+
+### Complete Enterprise Network
+
+![Complete Enterprise Topology](images/full-enterprise-topology.png)
+
+---
+
+## 🏢 HQ Network
+
+![HQ Topology](images/hq-topology.png)
+
+---
+
+## 🏢 Branch 1 Network
+
+![Branch 1 Topology](images/branch-1-topology.png)
+
+---
+
+## 🏢 Branch 2 Network
+
+![Branch 2 Topology](images/branch-2-topology.png)
+
+---
+
+## 🛠️ Technologies Used
+
+- Cisco Packet Tracer
+- Cisco IOS
 - OSPF
 - DHCP
 - VLAN
 - Inter-VLAN Routing
 - Router-on-a-Stick
 - Extended ACL
-- Wireless Networking
-- Cisco IOS
-- Cisco Packet Tracer
+- Wireless Access Points
+- IPv4
 
-## Network Topology
+---
 
-![Complete Enterprise Topology](images/full-enterprise-topology.png)
+## 🔀 OSPF Dynamic Routing
 
-## HQ Network
+OSPF is configured to provide dynamic routing between the enterprise routers.
 
-![HQ Topology](images/hq-topology.png)
+- OSPF Process ID: 100
+- Area: 0
+- R1 Router ID: 1.1.1.1
+- R2 Router ID: 2.2.2.2
+- R3 Router ID: 3.3.3.3
 
-## Branch 1 Network
+---
 
-![Branch 1 Topology](images/branch-1-topology.png)
+## 🏷️ VLAN Configuration
 
-## Branch 2 Network
+VLANs are used to provide network segmentation between departments.
 
-![Branch 2 Topology](images/branch-2-topology.png)
+| VLAN | Department |
+|---|---|
+| VLAN 10 | IT |
+| VLAN 20 | Sales |
+| VLAN 30 | IT |
+| VLAN 40 | HR |
 
-## Key Implementations
+---
 
-- Configured OSPF for dynamic routing between routers.
-- Implemented DHCP for automatic IP address assignment.
-- Configured VLANs for department segmentation.
-- Implemented Inter-VLAN Routing using Router-on-a-Stick.
-- Applied Extended ACLs to control inter-network traffic.
-- Integrated wireless connectivity using access points.
+## 🔄 Inter-VLAN Routing
 
-## Network Verification
+Inter-VLAN communication is implemented using Router-on-a-Stick with 802.1Q subinterfaces.
 
-The following Cisco IOS commands were used for network verification:
+Each VLAN uses a router subinterface as its default gateway.
+
+---
+
+## 📡 DHCP
+
+DHCP is configured to automatically provide IP addressing information to network clients.
+
+DHCP provides:
+
+- IP Address
+- Subnet Mask
+- Default Gateway
+- DNS Server
+
+---
+
+## 🔐 Extended ACL Security
+
+Extended Access Control Lists are implemented to control traffic between selected network segments.
+
+ACL policies are used to restrict unauthorized traffic while allowing permitted communication.
+
+---
+
+## 📶 Wireless Network
+
+Wireless Access Points are integrated into the enterprise network to provide connectivity for wireless devices such as laptops.
+
+---
+
+## 🧪 Network Verification
+
+The following Cisco IOS commands are used to verify the network:
 
 ```text
 show ip interface brief
@@ -55,3 +122,13 @@ show ip dhcp binding
 show vlan brief
 show interfaces trunk
 show access-lists
+```
+## 📦 Cisco Packet Tracer Project
+
+The complete Cisco Packet Tracer project is included in this repository.
+
+### Download / Open the Project
+
+[📥 Open Cisco Packet Tracer File](configs/SoftTech-Enterprise-Network.pkt)
+
+> **Note:** Cisco Packet Tracer is required to open the `.pkt` file.
