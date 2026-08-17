@@ -129,6 +129,7 @@ The complete Cisco Packet Tracer project is included in this repository.
 
 ### Download / Open the Project
 
-[📥 Open Cisco Packet Tracer File](configs/SoftTech-Enterprise-Network.pkt)
+[📥 Open PROJECT (SOFT.TECH).pkt](PROJECT%20(SOFT.TECH).pkt)
 
 > **Note:** Cisco Packet Tracer is required to open the `.pkt` file.
+
